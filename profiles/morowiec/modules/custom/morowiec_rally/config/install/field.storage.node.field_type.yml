@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_date_from
-field_name: field_date_from
+    - taxonomy
+id: node.field_type
+field_name: field_type
 entity_type: node
-type: datetime
+type: entity_reference
 settings:
-  datetime_type: date
-module: datetime
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true

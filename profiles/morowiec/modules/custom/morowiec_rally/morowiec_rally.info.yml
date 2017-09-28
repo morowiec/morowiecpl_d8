@@ -8,8 +8,10 @@ dependencies:
   - field
   - language
   - menu_ui
+  - morowiec_bikes
   - node
   - path
+  - taxonomy
   - text
   - user
 package: Morowiec

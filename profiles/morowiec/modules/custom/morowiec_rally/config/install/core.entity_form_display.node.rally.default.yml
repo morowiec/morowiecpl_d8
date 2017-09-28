@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.rally.field_date_from
     - field.field.node.rally.field_date_to
     - field.field.node.rally.field_result
+    - field.field.node.rally.field_type
     - node.type.rally
   module:
     - datetime
@@ -60,6 +61,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_type:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select
