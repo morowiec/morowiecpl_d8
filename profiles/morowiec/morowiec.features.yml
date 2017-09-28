@@ -1,0 +1,11 @@
+bundle: morowiec
+excluded:
+  - core.base_field_override.shortcut.default.title
+  - contact.form.personal
+  - system.menu.account
+  - system.menu.footer
+  - system.menu.main
+  - system.menu.tools
+  - shortcut.set.default
+  - views.view.glossary
+required: true
