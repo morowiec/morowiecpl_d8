@@ -1,0 +1,26 @@
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.node.bikes.body
+    - node.type.bikes
+  module:
+    - text
+    - user
+id: node.bikes.default
+targetEntityType: node
+bundle: bikes
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
