@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.bikes.field_main_image
     - field.field.node.bikes.field_mileage
     - field.field.node.bikes.field_tags
+    - field.field.node.bikes.field_youtube
     - node.type.bikes
   module:
     - datetime
@@ -16,6 +17,7 @@ dependencies:
     - link
     - text
     - user
+    - video_embed_field
 id: node.bikes.default
 targetEntityType: node
 bundle: bikes
@@ -47,7 +49,7 @@ content:
     type: datetime_default
     region: content
   field_links:
-    weight: 6
+    weight: 7
     label: above
     settings:
       trim_length: 80
@@ -77,12 +79,23 @@ content:
     type: number_integer
     region: content
   field_tags:
-    weight: 7
+    weight: 8
     label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_youtube:
+    weight: 6
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
     region: content
   links:
     weight: 0

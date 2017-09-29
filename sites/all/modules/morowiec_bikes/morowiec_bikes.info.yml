@@ -16,5 +16,6 @@ dependencies:
   - path
   - text
   - user
+  - video_embed_field
 version: 8.x-1.0
 package: Morowiec

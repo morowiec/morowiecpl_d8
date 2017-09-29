@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.bikes.field_main_image
     - field.field.node.bikes.field_mileage
     - field.field.node.bikes.field_tags
+    - field.field.node.bikes.field_youtube
     - image.style.thumbnail
     - node.type.bikes
   module:
@@ -17,6 +18,7 @@ dependencies:
     - link
     - path
     - text
+    - video_embed_field
 id: node.bikes.default
 targetEntityType: node
 bundle: bikes
@@ -33,7 +35,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -50,7 +52,7 @@ content:
     type: datetime_default
     region: content
   field_links:
-    weight: 7
+    weight: 8
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -73,13 +75,19 @@ content:
     type: number
     region: content
   field_tags:
-    weight: 26
+    weight: 15
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_youtube:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
     region: content
   langcode:
     type: language_select
@@ -89,7 +97,7 @@ content:
     region: content
   path:
     type: path
-    weight: 13
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -97,14 +105,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 12
     third_party_settings: {  }
     region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     third_party_settings: {  }
     region: content
   title:
@@ -116,13 +124,13 @@ content:
     third_party_settings: {  }
     region: content
   translation:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
