@@ -11,4 +11,5 @@ dependencies:
   - path
   - text
   - user
+version: 8.x-1.0
 package: Morowiec
