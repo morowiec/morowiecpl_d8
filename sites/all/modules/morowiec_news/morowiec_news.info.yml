@@ -1,0 +1,19 @@
+name: News
+description: 'Provides News content type and related configuration. Contet type for the news.'
+type: module
+core: 8.x
+dependencies:
+  - colorbox
+  - content_translation
+  - field
+  - file
+  - image
+  - language
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+  - views
+version: 8.x-1.0
+package: Morowiec

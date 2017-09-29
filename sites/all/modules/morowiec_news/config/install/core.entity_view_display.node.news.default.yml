@@ -1,0 +1,70 @@
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_images
+    - field.field.node.news.field_main_image
+    - field.field.node.news.field_tags
+    - image.style.max_650x650
+    - image.style.medium
+    - node.type.news
+  module:
+    - colorbox
+    - text
+    - user
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_images:
+    weight: 3
+    label: visually_hidden
+    settings:
+      colorbox_node_style: thumbnail
+      colorbox_node_style_first: ''
+      colorbox_image_style: max_650x650
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings: {  }
+    type: colorbox
+    region: content
+  field_main_image:
+    weight: 0
+    label: visually_hidden
+    settings:
+      colorbox_node_style: medium
+      colorbox_node_style_first: ''
+      colorbox_image_style: max_650x650
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings: {  }
+    type: colorbox
+    region: content
+  field_tags:
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true
